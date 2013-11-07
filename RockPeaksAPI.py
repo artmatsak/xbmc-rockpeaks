@@ -16,12 +16,13 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
+import sys
 import urllib
 import urllib2
-try:
-    import simplejson as json
-except ImportError:
-    import json
+if sys.version_info >= (2, 7):
+    import json as _json
+else:
+    import simplejson as _json
 
 class RockPeaksAPI():
     APIKEY = 'c9358b19a1fde1c7cdbc7cf492a541c7'
@@ -38,7 +39,7 @@ class RockPeaksAPI():
         try:
             con = urllib2.urlopen(self.endpoint + '?' + urllib.urlencode(params))
             inputdata = con.read()
-            ret_obj = json.loads(inputdata)
+            ret_obj = _json.loads(inputdata)
             con.close()
             return ret_obj
 
