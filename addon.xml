@@ -14,7 +14,8 @@
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
     <language></language>
-    <summary>Plays live music videos from RockPeaks</summary>
-    <description>Choose from a huge selection of live music videos available at RockPeaks</description>
+    <summary lang="en">Plays live music videos from RockPeaks</summary>
+    <description lang="en">Choose from a huge selection of live music videos available at RockPeaks</description>
+    <disclaimer lang="en">You don't need a RockPeaks account to use this script. However, extra functionality such as user playlists will require a login. Go to http://www.rockpeaks.com to create an account.</disclaimer>
   </extension>
 </addon>
